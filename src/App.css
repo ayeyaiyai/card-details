@@ -1,0 +1,282 @@
+.App {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  font-family: monospace;
+  min-height: 600px;
+}
+
+.card-info {
+  width: 30%;
+  height: 100vh;
+  color: white;
+  background-image: url('./images/bg-main-desktop.png');
+  background-size:100% 100%;
+}
+
+.card-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100vh;
+  align-items: flex-end;
+}
+
+.card-front {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  transform: translateX(30%);
+  min-width: 447px;
+  min-height: 245px;
+  background-image: url('./images/bg-card-front.png');
+}
+
+.card-logo {
+  position: absolute;
+  top: 24px;
+  left: 24px;
+}
+
+.card-number {
+  position: absolute;
+  bottom: 30%;
+  left: 24px;
+  font-size: 27.5px;
+  letter-spacing: 4px;
+}
+
+.card-name {
+  position: absolute;
+  bottom: 24px;
+  left: 24px;
+  font-size: 16px;
+}
+
+.card-date {
+  position: absolute;
+  bottom: 24px;
+  right: 24px;
+  font-size: 16px;
+}
+
+.card-back {
+  position: relative;
+  transform: translateX(50%);
+  background-image: url('./images/bg-card-back.png');
+  min-width: 447px;
+  min-height: 245px;
+  margin-top: 64px;
+}
+
+.card-front, .card-back {
+  box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.178);
+  border-radius: 10px;
+}
+
+.card-cvc {
+  position: absolute;
+  top: 45.5%;
+  right: 54px;
+  letter-spacing: 1.5px;
+  font-size: 1em;
+}
+
+.form-container {
+  width: 70%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.success-message  {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: absolute;
+  width: 300px;
+  height: 283px;
+  background-color: white;
+}
+
+.visible {
+  display: block;
+}
+
+.hidden {
+  display: none;
+}
+
+.complete-icon {
+  margin: 24px 0px;
+}
+
+.complete-title {
+  font-size: 24px;
+  font-weight: 700;
+  letter-spacing: 3px;
+  margin-bottom: 24px;
+}
+
+.complete-message {
+  color: rgba(0, 0, 0, 0.651);
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.card-form {
+  width: 300px;
+  display: flex;
+  flex-direction: column;
+  border-radius: 8px;
+  color: rgb(61, 0, 61);
+}
+
+.cardholder-input, .card-number-input {
+  margin-top: 4px;
+  margin-bottom: 14px;
+  width: 282px;
+}
+
+input {
+  height: 30px;
+  border-radius: 8px;
+  border: 1px solid rgba(0, 0, 0, 0.199);
+  padding: 4px 8px;
+}
+
+.input-error {
+  border-color: red;
+}
+
+.input-field {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 16px;
+}
+
+.bottom-card-inputs {
+  display: flex;
+}
+
+.date-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.date-inputs {
+  display: flex;
+  margin-top: 4px;
+}
+
+.date-input {
+  width: 48px;
+}
+
+.month-input {
+  margin-right: 8px;
+}
+
+.year-input {
+  margin-right: 32px;
+}
+
+.cvc-input-section {
+  display: flex;
+  flex-direction: column;
+  margin-top: 4px;
+}
+
+.cvc-input{
+  width: 110px;
+}
+
+.card-name-error, .card-number-error {
+  margin-top: -8px;
+  margin-bottom: 12px;
+}
+
+.date-error, .cvc-error {
+  margin-top: 6px;
+}
+
+.error-message {
+  color: rgb(204, 0, 0);
+  font-size: 12px;
+}
+
+.confirm-button, .complete-button {
+  width: 100%;
+  margin-top: 36px;
+  border-radius: 8px;
+  border: none;
+  height: 42px;
+  background-color: rgb(61, 0, 61);
+  color: white;
+  font-family: monospace;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.confirm-button:hover, .complete-button:hover {
+  background-color:rgb(39, 0, 39);
+}
+
+
+@media (max-width: 1100px) {
+  .card-front {
+    transform: scaleX(.75) scaleY(.75) translateX(40%);
+
+  }
+
+  .card-back {
+    transform: scaleX(.75) scaleY(.75) translateX(50%);
+  }
+}
+
+@media (max-width: 875px) {
+  .App {
+    display: flex;
+    flex-direction: column;
+    min-width: 375px;
+    min-height: 600px;
+    justify-content: start;
+  }
+
+  .card-info {
+    position: relative;
+    top: 0px;
+    width: 100%;
+    display: flex;
+    margin-bottom: 64px;
+    flex-direction: column;
+    align-items: center;
+    background-image: url('./images/bg-main-mobile.png');
+    background-size: 100% 100%;
+    height: 240px;
+  }
+
+  .card-front {
+    position: absolute;
+    transform: translateX(43%) translateY(35%) scale(.57);
+    z-index: 3;
+  }
+
+  .card-back {
+    position: absolute;
+    transform: translateX(53%) translateY(-9.9%) scale(.57);
+  }
+
+  .card-form {
+    margin-bottom: 24px;
+  }
+
+  .success-message {
+    transform: translateY(120px);
+  }
+}
