@@ -15,3 +15,8 @@ Each input field is checked.
 If the form passes validation, the form is submitted and the values for each state is reset to blank, the error states are reset to false, and setCompleteVisible is set to true. This triggers the rerendering of the form-container div. When completeVisible is true, the page will render a div containing a message indicating that the form has been successfully submitted. Clicking continue on this message will then set the completeVisible state to false, and the form-container will rerender showing the form again. 
 
 There is a mobile layout featured as well.
+
+A live version can be seen below:
+https://connor-card-details.netlify.app/
+
+Please don't input your real credit card information :)
