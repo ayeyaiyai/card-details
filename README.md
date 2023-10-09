@@ -4,7 +4,7 @@ This is my solution to the interactive card details form problem on frontendment
 The form verification comes in two ways - there are error management states (the states that end with Error) and the built in input parameters. The error management states trigger the rendering of an error message that corresponds to a specific issue with the variable that is tied to user input. This issue can be either a blank field or incorrect format. 
 
 This is achieved by using ternary statements:
-(ex: {cardholderNameError ? <div className='error-message card-name-error'>Can't be blank</div> : ''})
+{cardholderNameError ? <div className='error-message card-name-error'>Can't be blank</div> : ''}
 
 When the form is submitted, the onSubmit function checks whether or not the input field is empty. If the input field is empty it will set the corresponding field error state to true, otherwise it will be set to false.
 
